@@ -59,6 +59,7 @@ public class DragController : MonoBehaviour
 
     private void InitDrag()
     {
+        _lastDragged.LastPosition = _lastDragged.transform.position;
         UpdateDragStatus(true); 
     }
 
