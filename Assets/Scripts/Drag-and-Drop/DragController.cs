@@ -65,7 +65,7 @@ public class DragController : MonoBehaviour
     private void Drag()
     {
         _lastDragged.transform.position = new Vector2(_worldPosition.x, _worldPosition.y);
-    }
+    } 
 
     private void Drop()
     {
@@ -75,6 +75,6 @@ public class DragController : MonoBehaviour
     private void UpdateDragStatus(bool isDragging)
     {
         _isDragActive = _lastDragged.IsDragging = isDragging;
-        gameObject.layer = isDragging ? Layer.Dragging : Layer.Default;
+        _lastDragged.gameObject.layer = isDragging ? Layer.Dragging : Layer.Default;
     }
 }
